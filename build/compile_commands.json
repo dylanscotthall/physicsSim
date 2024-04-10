@@ -1,0 +1,176 @@
+[
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build",
+  "command": "C:\\mingw64\\bin\\gcc.exe  @CMakeFiles/glad.dir/includes_C.rsp -g -o CMakeFiles\\glad.dir\\libs\\glad\\src\\glad.c.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\glad\\src\\glad.c",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/glad/src/glad.c",
+  "output": "CMakeFiles/glad.dir/libs/glad/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/imgui.dir/includes_CXX.rsp -std=c++14 -g -std=gnu++14 -o CMakeFiles\\imgui.dir\\libs\\imgui\\imgui.cpp.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\imgui\\imgui.cpp",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/imgui/imgui.cpp",
+  "output": "CMakeFiles/imgui.dir/libs/imgui/imgui.cpp.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/imgui.dir/includes_CXX.rsp -std=c++14 -g -std=gnu++14 -o CMakeFiles\\imgui.dir\\libs\\imgui\\imgui_demo.cpp.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\imgui\\imgui_demo.cpp",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/imgui/imgui_demo.cpp",
+  "output": "CMakeFiles/imgui.dir/libs/imgui/imgui_demo.cpp.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/imgui.dir/includes_CXX.rsp -std=c++14 -g -std=gnu++14 -o CMakeFiles\\imgui.dir\\libs\\imgui\\imgui_draw.cpp.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\imgui\\imgui_draw.cpp",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/imgui/imgui_draw.cpp",
+  "output": "CMakeFiles/imgui.dir/libs/imgui/imgui_draw.cpp.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/imgui.dir/includes_CXX.rsp -std=c++14 -g -std=gnu++14 -o CMakeFiles\\imgui.dir\\libs\\imgui\\imgui_tables.cpp.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\imgui\\imgui_tables.cpp",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/imgui/imgui_tables.cpp",
+  "output": "CMakeFiles/imgui.dir/libs/imgui/imgui_tables.cpp.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/imgui.dir/includes_CXX.rsp -std=c++14 -g -std=gnu++14 -o CMakeFiles\\imgui.dir\\libs\\imgui\\imgui_widgets.cpp.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\imgui\\imgui_widgets.cpp",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/imgui/imgui_widgets.cpp",
+  "output": "CMakeFiles/imgui.dir/libs/imgui/imgui_widgets.cpp.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/imgui.dir/includes_CXX.rsp -std=c++14 -g -std=gnu++14 -o CMakeFiles\\imgui.dir\\libs\\imgui\\imgui_impl_glfw.cpp.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\imgui\\imgui_impl_glfw.cpp",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/imgui/imgui_impl_glfw.cpp",
+  "output": "CMakeFiles/imgui.dir/libs/imgui/imgui_impl_glfw.cpp.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/imgui.dir/includes_CXX.rsp -std=c++14 -g -std=gnu++14 -o CMakeFiles\\imgui.dir\\libs\\imgui\\imgui_impl_opengl3.cpp.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\imgui\\imgui_impl_opengl3.cpp",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/imgui/imgui_impl_opengl3.cpp",
+  "output": "CMakeFiles/imgui.dir/libs/imgui/imgui_impl_opengl3.cpp.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/projectSim.dir/includes_CXX.rsp -std=c++14 -g -std=gnu++14 -o CMakeFiles\\projectSim.dir\\src\\camera.cpp.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\src\\camera.cpp",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/camera.cpp",
+  "output": "CMakeFiles/projectSim.dir/src/camera.cpp.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/projectSim.dir/includes_CXX.rsp -std=c++14 -g -std=gnu++14 -o CMakeFiles\\projectSim.dir\\src\\main.cpp.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\src\\main.cpp",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/main.cpp",
+  "output": "CMakeFiles/projectSim.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/projectSim.dir/includes_CXX.rsp -std=c++14 -g -std=gnu++14 -o CMakeFiles\\projectSim.dir\\src\\rect.cpp.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\src\\rect.cpp",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/rect.cpp",
+  "output": "CMakeFiles/projectSim.dir/src/rect.cpp.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/projectSim.dir/includes_CXX.rsp -std=c++14 -g -std=gnu++14 -o CMakeFiles\\projectSim.dir\\src\\scene.cpp.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\src\\scene.cpp",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/scene.cpp",
+  "output": "CMakeFiles/projectSim.dir/src/scene.cpp.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/projectSim.dir/includes_CXX.rsp -std=c++14 -g -std=gnu++14 -o CMakeFiles\\projectSim.dir\\src\\shader.cpp.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\src\\shader.cpp",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/shader.cpp",
+  "output": "CMakeFiles/projectSim.dir/src/shader.cpp.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/projectSim.dir/includes_CXX.rsp -std=c++14 -g -std=gnu++14 -o CMakeFiles\\projectSim.dir\\src\\window.cpp.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\src\\window.cpp",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/window.cpp",
+  "output": "CMakeFiles/projectSim.dir/src/window.cpp.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build/glfw-binaries/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\context.c.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\glfw\\src\\context.c",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/glfw/src/context.c",
+  "output": "glfw-binaries/src/CMakeFiles/glfw.dir/context.c.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build/glfw-binaries/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\init.c.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\glfw\\src\\init.c",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/glfw/src/init.c",
+  "output": "glfw-binaries/src/CMakeFiles/glfw.dir/init.c.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build/glfw-binaries/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\input.c.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\glfw\\src\\input.c",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/glfw/src/input.c",
+  "output": "glfw-binaries/src/CMakeFiles/glfw.dir/input.c.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build/glfw-binaries/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\monitor.c.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\glfw\\src\\monitor.c",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/glfw/src/monitor.c",
+  "output": "glfw-binaries/src/CMakeFiles/glfw.dir/monitor.c.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build/glfw-binaries/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\vulkan.c.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\glfw\\src\\vulkan.c",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/glfw/src/vulkan.c",
+  "output": "glfw-binaries/src/CMakeFiles/glfw.dir/vulkan.c.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build/glfw-binaries/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\window.c.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\glfw\\src\\window.c",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/glfw/src/window.c",
+  "output": "glfw-binaries/src/CMakeFiles/glfw.dir/window.c.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build/glfw-binaries/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_init.c.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\glfw\\src\\win32_init.c",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/glfw/src/win32_init.c",
+  "output": "glfw-binaries/src/CMakeFiles/glfw.dir/win32_init.c.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build/glfw-binaries/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_joystick.c.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\glfw\\src\\win32_joystick.c",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/glfw/src/win32_joystick.c",
+  "output": "glfw-binaries/src/CMakeFiles/glfw.dir/win32_joystick.c.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build/glfw-binaries/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_monitor.c.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\glfw\\src\\win32_monitor.c",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/glfw/src/win32_monitor.c",
+  "output": "glfw-binaries/src/CMakeFiles/glfw.dir/win32_monitor.c.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build/glfw-binaries/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_time.c.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\glfw\\src\\win32_time.c",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/glfw/src/win32_time.c",
+  "output": "glfw-binaries/src/CMakeFiles/glfw.dir/win32_time.c.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build/glfw-binaries/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_thread.c.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\glfw\\src\\win32_thread.c",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/glfw/src/win32_thread.c",
+  "output": "glfw-binaries/src/CMakeFiles/glfw.dir/win32_thread.c.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build/glfw-binaries/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_window.c.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\glfw\\src\\win32_window.c",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/glfw/src/win32_window.c",
+  "output": "glfw-binaries/src/CMakeFiles/glfw.dir/win32_window.c.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build/glfw-binaries/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\wgl_context.c.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\glfw\\src\\wgl_context.c",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/glfw/src/wgl_context.c",
+  "output": "glfw-binaries/src/CMakeFiles/glfw.dir/wgl_context.c.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build/glfw-binaries/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\egl_context.c.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\glfw\\src\\egl_context.c",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/glfw/src/egl_context.c",
+  "output": "glfw-binaries/src/CMakeFiles/glfw.dir/egl_context.c.obj"
+},
+{
+  "directory": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/build/glfw-binaries/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\osmesa_context.c.obj -c C:\\Users\\dylan\\Desktop\\Projects\\Cpp\\projectSim\\libs\\glfw\\src\\osmesa_context.c",
+  "file": "C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/glfw/src/osmesa_context.c",
+  "output": "glfw-binaries/src/CMakeFiles/glfw.dir/osmesa_context.c.obj"
+}
+]
