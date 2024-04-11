@@ -8,7 +8,7 @@ Window::Window(const char *title, unsigned int width, unsigned int height) : scr
 {
     //  glfw: initialize and configure
     glfwInit();
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
@@ -29,7 +29,7 @@ Window::Window(const char *title, unsigned int width, unsigned int height) : scr
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
     glfwSetCursorPosCallback(window, Input::mouse_callback);
     glfwSetScrollCallback(window, Input::scroll_callback);
-
+    // glEnable(GL_DEPTH_TEST);
     // glad: load all OpenGL function pointers
     // ---------------------------------------
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
@@ -44,7 +44,7 @@ Window::~Window()
 void Window::renderStart()
 {
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 void Window::renderEnd()
 {

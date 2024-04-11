@@ -17,6 +17,7 @@ public:
     Shader(const char *vertexPath, const char *fragmentPath);
     void use() const;
     void setUniformMatrix4fv(const char *name, glm::mat4 uniform);
+    void setUniformVec3f(const char *name, glm::vec3 uniform);
 
 private:
     void checkCompileErrors(GLuint shader, std::string type);

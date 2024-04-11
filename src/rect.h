@@ -12,11 +12,11 @@ class Rect
 public:
     unsigned int VAO, VBO, EBO;
     glm::mat4 model;
-    Rect(float posX, float posY, float width, float height);
+    Rect(float posX, float posY, float posZ, float width, float height, float breadth);
     ~Rect();
     void render(Shader *shader, Scene *scene);
-    void update();
+    void update(float deltaTime);
 
 private:
-    float posX, posY, width, height;
+    float posX, posY, posZ, width, height, breadth;
 };

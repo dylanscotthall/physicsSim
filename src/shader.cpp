@@ -62,8 +62,17 @@ void Shader::use() const
 }
 void Shader::setUniformMatrix4fv(const char *name, glm::mat4 uniform)
 {
+    use();
     int loc = glGetUniformLocation(ID, name);
     glUniformMatrix4fv(loc, 1, GL_FALSE, glm::value_ptr(uniform));
+}
+void Shader::setUniformVec3f(const char *name, glm::vec3 uniform)
+{
+    use();
+    int loc = glGetUniformLocation(ID, name);
+    std::cout << glGetError() << std::endl;
+    glUniform3f(loc, uniform.x, uniform.y, uniform.z);
+    std::cout << glGetError() << std::endl;
 }
 
 void Shader::checkCompileErrors(GLuint shader, std::string type)

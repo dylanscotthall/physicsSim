@@ -9,7 +9,8 @@
 class Input
 {
 public:
-    static void processInput(GLFWwindow *window, glm::vec3 *cameraPos, glm::vec3 *cameraFront, glm::vec3 *cameraUp, float deltaTime)
+    bool mouseCapture = true;
+    void processInput(GLFWwindow *window, glm::vec3 *cameraPos, glm::vec3 *cameraFront, glm::vec3 *cameraUp, float deltaTime)
     {
         const float cameraSpeed = 2.5f * deltaTime; // adjust accordingly
         if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
@@ -22,6 +23,14 @@ public:
             *cameraPos += glm::normalize(glm::cross((*cameraFront), (*cameraUp))) * cameraSpeed;
         if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
             glfwSetWindowShouldClose(window, true);
+        if (glfwGetKey(window, GLFW_KEY_LEFT_ALT) == GLFW_PRESS)
+        {
+            mouseCapture = !mouseCapture;
+            if (mouseCapture)
+                glfwSetCursorPosCallback(window, mouse_callback);
+            else
+                glfwSetCursorPosCallback(window, mouse_callback);
+        }
     }
     static void mouse_callback(GLFWwindow *window, double xpos, double ypos)
     {
