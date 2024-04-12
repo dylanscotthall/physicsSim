@@ -569,6 +569,9 @@ CMakeFiles/projectSim.dir/src/main.cpp.obj: C:/Users/dylan/Desktop/Projects/Cpp/
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc \
   C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/scene.h \
   C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/camera.h \
+  C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/gameObject.h \
+  C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/physicsComponent.h \
+  C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/renderComponent.h \
   C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/input.h \
   C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/userData.h \
   C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/physics.h \
@@ -922,7 +925,10 @@ CMakeFiles/projectSim.dir/src/rect.cpp.obj: C:/Users/dylan/Desktop/Projects/Cpp/
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/fstream.tcc \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/sstream \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/sstream.tcc \
-  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream \
+  C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/gameObject.h \
+  C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/physicsComponent.h \
+  C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/renderComponent.h
 
 CMakeFiles/projectSim.dir/src/scene.cpp.obj: C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/scene.cpp \
   C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/scene.h \
@@ -1811,7 +1817,26 @@ CMakeFiles/projectSim.dir/src/window.cpp.obj: C:/Users/dylan/Desktop/Projects/Cp
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
   C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/userData.h \
   C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/camera.h \
-  C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/input.h
+  C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/input.h \
+  C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/rect.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/vector \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_bvector.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc \
+  C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/scene.h \
+  C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/shader.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/fstream \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/codecvt.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/fstream.tcc \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/sstream \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/sstream.tcc \
+  C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/gameObject.h \
+  C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/physicsComponent.h \
+  C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/renderComponent.h
 
 
 C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/glm/glm/ext/matrix_float4x2.hpp:
@@ -2344,6 +2369,8 @@ C:/Users/dylan/Desktop/Projects/Cpp/projectSim/libs/glm/glm/ext/vector_uint1.hpp
 
 C:/mingw64/x86_64-w64-mingw32/include/string.h:
 
+C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/physicsComponent.h:
+
 C:/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/wchar.h:
@@ -2513,6 +2540,10 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_bvector.h:
+
+C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/gameObject.h:
+
+C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/renderComponent.h:
 
 C:/Users/dylan/Desktop/Projects/Cpp/projectSim/src/input.h:
 

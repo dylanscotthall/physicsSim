@@ -1,9 +1,12 @@
 #include "rect.h"
 #include <glm/glm.hpp>
 
-Rect::Rect(float posX, float posY, float posZ, float width, float height, float breadth) : posX(posX), posY(posY), posZ(posZ), width(width), height(height), breadth(breadth)
+Rect::Rect(float posX, float posY, float posZ, float width, float height, float breadth) : GameObject(), width(width), height(height), breadth(breadth)
 {
-    model = glm::mat4(1.0f);
+    physics->posX = posX;
+    physics->posY = posY;
+    physics->posZ = posZ;
+    physics->model = glm::mat4(1.0f);
     float vertices[] = {
         // triangles
         // front 1
@@ -93,18 +96,17 @@ Rect::Rect(float posX, float posY, float posZ, float width, float height, float 
        //     5, 1, 4, // right first triangle
        //     0, 1, 4  // right second triangle
        // };
-    glGenVertexArrays(1, &VAO);
-    glGenBuffers(1, &VBO);
-    glGenBuffers(1, &EBO);
+    glGenVertexArrays(1, &renderer->VAO);
+    glGenBuffers(1, &renderer->VBO);
+    glGenBuffers(1, &renderer->EBO);
     // bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
-    glBindVertexArray(VAO);
+    glBindVertexArray(renderer->VAO);
 
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBindBuffer(GL_ARRAY_BUFFER, renderer->VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, renderer->EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
-
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void *)0);
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void *)(3 * sizeof(float)));
@@ -122,22 +124,37 @@ Rect::Rect(float posX, float posY, float posZ, float width, float height, float 
 }
 Rect::~Rect()
 {
-    glDeleteVertexArrays(1, &VAO);
-    glDeleteBuffers(1, &VBO);
-    glDeleteBuffers(1, &EBO);
+    glDeleteVertexArrays(1, &renderer->VAO);
+    glDeleteBuffers(1, &renderer->VBO);
+    glDeleteBuffers(1, &renderer->EBO);
 }
 
-void Rect::render(Shader *shader, Scene *scene)
+void Rect::render(Scene *scene, Camera *camera)
 {
-    shader->setUniformMatrix4fv("model", model);
-    shader->setUniformMatrix4fv("view", scene->view);
-    shader->setUniformMatrix4fv("projection", scene->projection);
-    glUseProgram(shader->ID);
-    glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
+    glUseProgram(renderer->shader->ID);
+    renderer->shader->setUniformMatrix4fv("model", physics->model);
+    renderer->shader->setUniformMatrix4fv("view", scene->view);
+    renderer->shader->setUniformMatrix4fv("projection", scene->projection);
+    renderer->shader->setUniformVec3f("objectColor", renderer->color);
+    renderer->shader->setUniformVec3f("lightColor", glm::vec3(1.0f, 1.0f, 1.0f));
+    renderer->shader->setUniformVec3f("lightPos", glm::vec3(1.0f, 0.0f, 2.0f));
+    renderer->shader->setUniformVec3f("viewPos", camera->cameraPos);
+    renderer->shader->setUniformVec3f("material.ambient", glm::vec3(1.0f, 0.5f, 0.31f));
+    renderer->shader->setUniformVec3f("material.diffuse", glm::vec3(1.0f, 0.5f, 0.31f));
+    renderer->shader->setUniformVec3f("material.specular", glm::vec3(0.5f, 0.5f, 0.5f));
+    renderer->shader->setUniformf("material.shininess", 0.2f);
+    renderer->shader->setUniformVec3f("light.ambient", glm::vec3(0.2f, 0.2f, 0.2f));
+    renderer->shader->setUniformVec3f("light.diffuse", glm::vec3(0.5f, 0.5f, 0.5f));
+    renderer->shader->setUniformVec3f("light.specular", glm::vec3(1.0f, 1.0f, 1.0f));
+    glBindVertexArray(renderer->VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
     // glDrawArrays(GL_TRIANGLES, 0, 6);
     glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
 }
 void Rect::update(float deltaTime)
 {
-    // model = glm::translate(model, glm::vec3(0.0f, 0.2f * deltaTime, 0.0f));
+    if (physics->physicsEnabled)
+    {
+        float gravity = -1.0f;
+        physics->model = glm::translate(physics->model, glm::vec3(physics->velX * deltaTime, (physics->velY + gravity) * deltaTime, physics->velZ * deltaTime));
+    }
 }

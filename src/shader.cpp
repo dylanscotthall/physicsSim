@@ -54,6 +54,10 @@ Shader::Shader(const char *vertexPath, const char *fragmentPath)
     glDeleteShader(vertex);
     glDeleteShader(fragment);
 }
+Shader::~Shader()
+{
+    glDeleteProgram(ID);
+}
 // activate the shader
 // ------------------------------------------------------------------------
 void Shader::use() const
@@ -70,9 +74,13 @@ void Shader::setUniformVec3f(const char *name, glm::vec3 uniform)
 {
     use();
     int loc = glGetUniformLocation(ID, name);
-    std::cout << glGetError() << std::endl;
     glUniform3f(loc, uniform.x, uniform.y, uniform.z);
-    std::cout << glGetError() << std::endl;
+}
+void Shader::setUniformf(const char *name, float uniform)
+{
+    use();
+    int loc = glGetUniformLocation(ID, name);
+    glUniform1f(loc, uniform);
 }
 
 void Shader::checkCompileErrors(GLuint shader, std::string type)

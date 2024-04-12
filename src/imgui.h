@@ -24,25 +24,68 @@ public:
 
         // Setup Platform/Renderer backends
         ImGui_ImplGlfw_InitForOpenGL(window, true);
-        ImGui_ImplOpenGL3_Init("#version 330");
-        std::cout << "Test" << std::endl;
+        ImGui_ImplOpenGL3_Init("#version 430");
     }
     void renderStart(Rect *rect, float deltaTime)
     {
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
-        float t;
         {
             ImGui::Begin("Toolkit");
-            // ImGui::PushButtonRepeat(true);
-            ImGui::SliderFloat3("translation", &t, -1.0f, 1.0f);
-            // ImGui::SliderFloat3("translationB", &translationB.x, -1.0f, 1.0f);
-            if (ImGui::ArrowButton("##Up", ImGuiDir_Up))
-            {
-                rect->model = glm::translate(rect->model, glm::vec3(0.0f, 10.0f * deltaTime, 0.0f));
-            }
             ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / io->Framerate, io->Framerate);
+
+            ImGui::PushButtonRepeat(true);
+            ImGui::Text("X");
+            bool moveX = false, moveY = false, moveZ = false;
+            if (ImGui::ArrowButton("##LEFT", ImGuiDir_Left))
+            {
+                moveX = true;
+                rect->physics->velX = -100.0f;
+            }
+            ImGui::SameLine(0.0f, 5);
+            if (ImGui::ArrowButton("##RIGHT", ImGuiDir_Right))
+            {
+                moveX = true;
+                rect->physics->velX = 100.0f;
+            }
+            if (!moveX)
+            {
+                rect->physics->velX = 0.0f;
+            }
+            ImGui::Text("Y");
+            if (ImGui::ArrowButton("##UP", ImGuiDir_Up))
+            {
+                moveY = true;
+                rect->physics->velY = 100.0f;
+            }
+            ImGui::SameLine(0.0f, 5);
+            if (ImGui::ArrowButton("##DOWN", ImGuiDir_Down))
+            {
+                moveY = true;
+                rect->physics->velY = -100.0f;
+            }
+            if (!moveY)
+            {
+                rect->physics->velY = 0.0f;
+            }
+            ImGui::Text("Z");
+            if (ImGui::ArrowButton("##LEFT", ImGuiDir_Left))
+            {
+                moveZ = true;
+                rect->physics->velZ = -100.0f;
+            }
+            ImGui::SameLine(0.0f, 5);
+            if (ImGui::ArrowButton("##RIGHT", ImGuiDir_Right))
+            {
+                moveZ = true;
+                rect->physics->velZ = 100.0f;
+            }
+            if (!moveZ)
+            {
+                rect->physics->velZ = 0.0f;
+            }
+            ImGui::PopButtonRepeat();
             ImGui::End();
         }
         // rect->model = glm::translate(rect->model, glm::vec3(0.0f, 0.0f, 0.0f));

@@ -340,4 +340,7 @@ CMakeFiles/projectSim.dir/src/rect.cpp.obj: \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/fstream.tcc \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/sstream \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/sstream.tcc \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream \
+ C:\Users\dylan\Desktop\Projects\Cpp\projectSim\src\gameObject.h \
+ C:\Users\dylan\Desktop\Projects\Cpp\projectSim\src\physicsComponent.h \
+ C:\Users\dylan\Desktop\Projects\Cpp\projectSim\src\renderComponent.h

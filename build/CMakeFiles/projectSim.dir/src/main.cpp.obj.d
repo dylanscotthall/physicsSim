@@ -342,6 +342,9 @@ CMakeFiles/projectSim.dir/src/main.cpp.obj: \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc \
  C:\Users\dylan\Desktop\Projects\Cpp\projectSim\src\scene.h \
  C:\Users\dylan\Desktop\Projects\Cpp\projectSim\src\camera.h \
+ C:\Users\dylan\Desktop\Projects\Cpp\projectSim\src\gameObject.h \
+ C:\Users\dylan\Desktop\Projects\Cpp\projectSim\src\physicsComponent.h \
+ C:\Users\dylan\Desktop\Projects\Cpp\projectSim\src\renderComponent.h \
  C:\Users\dylan\Desktop\Projects\Cpp\projectSim\src\input.h \
  C:\Users\dylan\Desktop\Projects\Cpp\projectSim\src\userData.h \
  C:\Users\dylan\Desktop\Projects\Cpp\projectSim\src\physics.h \

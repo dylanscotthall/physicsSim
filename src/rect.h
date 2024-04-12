@@ -7,16 +7,16 @@
 #include <glm/gtc/type_ptr.hpp>
 #include "scene.h"
 #include "shader.h"
-class Rect
+#include "gameObject.h"
+
+class Rect : public GameObject
 {
 public:
-    unsigned int VAO, VBO, EBO;
-    glm::mat4 model;
+    float width, height, breadth;
     Rect(float posX, float posY, float posZ, float width, float height, float breadth);
     ~Rect();
-    void render(Shader *shader, Scene *scene);
-    void update(float deltaTime);
+    void render(Scene *scene, Camera *camera) override;
+    void update(float deltaTime) override;
 
 private:
-    float posX, posY, posZ, width, height, breadth;
 };

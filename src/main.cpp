@@ -12,6 +12,8 @@
 #include "physics.h"
 #include "scene.h"
 #include "imgui.h"
+#include "gameObject.h"
+
 int main()
 {
     // my project variables
@@ -19,7 +21,6 @@ int main()
     Camera camera;
     Physics physics;
     Scene scene;
-    Input input;
     IMGUI imgui = IMGUI(window.window);
 
     UserData *userData = new UserData(&camera);
@@ -28,14 +29,28 @@ int main()
     // my app variables
     Shader shader = Shader("../src/vertShader.glsl", "../src/fragShader.glsl");
     Shader lightShader = Shader("../src/lightShaderV.glsl", "../src/lightShader.glsl");
-    Rect light = Rect(1.0, 1.0, 1.0, 0.2, 0.2, 0.2);
-    Rect rect = Rect(0, 0, 0, 0.7, 0.7, 0.7);
-    // Rect rect2 = Rect(0.5f, 0.8f, 0.7, 0.7);
-    // Rect leftWall = Rect(-1.0f, 0.0f, 0.1f, 10.0f);
-    // Rect rightWall = Rect(1.0f, 0.0f, 0.1f, 10.0f);
-    // Rect upWall = Rect(0.0f, -1.0f, 10.0f, 0.1f);
-    // Rect downWall = Rect(0.0f, 1.0f, 10.0f, 0.1f);
+    Rect light = Rect(1.0, 0.0, 4.0, 0.2, 0.2, 0.2);
+    light.renderer->shader = &lightShader;
 
+    Rect rect = Rect(0.0f, 0.4, 0, 1, 1, 1);
+    rect.renderer->color = glm::vec3(5.0f, 0.0f, 0.0f);
+    rect.renderer->shader = &shader;
+    rect.physics->physicsEnabled = true;
+    Rect rect2 = Rect(0.0f, -5.0f, 0.0f, 5.0, 0.2, 5.0);
+    rect2.renderer->color = glm::vec3(0.0f, 1.0f, 0.0f);
+    rect2.renderer->shader = &shader;
+
+    std::vector<GameObject *> gameObjects;
+    gameObjects.push_back(&light);
+    gameObjects.push_back(&rect);
+    gameObjects.push_back(&rect2);
+    for (size_t i = 0; i < 5; i++)
+    {
+        Rect *r = new Rect(-3.0f, -(float)i + 1, 0.0f, 0.5f, 0.5f, 0.5f);
+        r->renderer->color = glm::vec3(0.0f, 0.0f, 1.0f);
+        r->renderer->shader = &shader;
+        gameObjects.push_back(r);
+    }
     // uncomment this call to draw in wireframe polygons.
     // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
@@ -44,35 +59,28 @@ int main()
     {
         physics.update();
         scene.update(&camera);
-        imgui.renderStart(&rect, physics.deltaTime);
+        imgui.renderStart(&light, physics.deltaTime);
         // input
-        input.processInput(window.window, &camera.cameraPos, &camera.cameraFront, &camera.cameraUp, physics.deltaTime);
+        Input::processInput(window.window, &camera, &light, physics.deltaTime);
         // render
         window.renderStart();
-        // rect.model = glm::rotate(rect.model, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
         // draw our first triangle
-        rect.update(physics.deltaTime);
-        shader.setUniformVec3f("objectColor", glm::vec3(1.0f, 0.5f, 0.31f));
-        shader.setUniformVec3f("lightColor", glm::vec3(1.0f, 1.0f, 1.0f));
-        shader.setUniformVec3f("lightPos", glm::vec3(1.0f, 1.0f, 1.0f));
-        rect.render(&shader, &scene);
 
-        light.render(&lightShader, &scene);
-        // rect2.render(&shader, &scene);
-        // leftWall.render(&shader, &scene);
-        // rightWall.render(&shader, &scene);
-        // upWall.render(&shader, &scene);
-        // downWall.render(&shader, &scene);
-        // glBindVertexArray(0); // no need to unbind it every time
+        physics.checkCollision(&gameObjects);
+        for (auto &&i : gameObjects)
+        {
+            i->update(physics.deltaTime);
+            i->render(&scene, &camera);
+        }
 
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         imgui.renderEnd();
         window.renderEnd();
     }
-
-    // optional: de-allocate all resources once they've outlived their purpose:
-    glDeleteProgram(shader.ID);
-
+    for (GameObject *g : gameObjects)
+    {
+        delete g;
+    }
     // glfw: terminate, clearing all previously allocated GLFW resources.
     glfwTerminate();
     delete userData;
